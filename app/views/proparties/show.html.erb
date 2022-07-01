@@ -1,0 +1,45 @@
+<div class = "proparty-main-photo" style= "background-image:url('<%= proparty_photo_url @proparty %>')">
+<div class ="photo-overlay">
+</div>
+</div>
+
+<div class = "container">
+<div class = "row">
+<div class = "col-8">
+
+ <% proparty_path(@proparty)%>
+
+<p>
+<strong>Name:</strong>
+<%= @proparty.name %>
+</p>
+
+<p>
+<strong>address:</strong>
+<%= @proparty.address %>
+</p>
+
+<p>
+<strong>Price:</strong>
+<%= @proparty.price %>
+</p>
+
+<p>
+<strong>Rooms:</strong>
+<%= @proparty.rooms %>
+</p>
+
+<p>
+<strong>Bathrooms:</strong>
+<%= @proparty.bathroom %>
+</p>
+
+</div>
+
+<div class = "col-4">
+<h4>Agent Info</h4>
+<%= render "proparties/agent_details" %>
+</div>
+</div>
+</div>
+

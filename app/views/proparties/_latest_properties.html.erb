@@ -1,0 +1,14 @@
+
+<% @proparties.each do |proparty| %>
+<div class = "col-4">
+     <%= link_to(proparty_thumbnail(proparty),proparty_path(proparty)) %>
+     <h2 class = "h4 mt-3"><%= link_to proparty.name, proparty_path(proparty) %> </h2>
+     <p><%= proparty.address %></p>
+     <%# <p><%= proparty.photo %> 
+     <%# <div class = "amenities">
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span> %>
+</div>
+<% end %>

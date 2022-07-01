@@ -1,0 +1,34 @@
+
+ <%# <%= render 'layouts/nav/sidebar' %> 
+<p id = "notice"><%= notice%> </p>
+<h1>Proparties</h1>
+<table class ="table table-responsive">
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+<th>Price</th>
+<th>Rooms</th>
+<th>Bathrooms</th>
+<th colspan= "3"></th>
+</tr>
+</thead>
+ <tbody>
+ <% @proparties.each do |proparty| %>
+ <tr>
+ <td><%= proparty.name %></td>
+ <td><%= proparty.address %></td>
+ <td><%= proparty.price %></td>
+ <td><%= proparty.rooms %></td>
+ <td><%= proparty.bathroom %></td>
+ <td><%= link_to 'Show',proparty %></td>
+ <td><%= link_to 'Edit',edit_proparty_path(proparty) %></td>
+ <td><%= link_to "Destroy", proparty, method: :delete,data: {confirm: 'Are you sure?'} %></td>
+ </tr>
+ <% end %>
+ </tbody>
+ </table>
+ <br>
+
+
+<%= link_to "New proparty", new_proparty_path, class: "btn1 btn-success" %>
